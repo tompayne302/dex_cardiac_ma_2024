@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Dexmedetomidine Cardiac Meta-analysis"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Preliminary Analysis
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    linkcolour: "#ff33f0"
+    toc: true
+    toc-depth: 3
+    number-sections: TRUE
+    number-depth: 3
+    maintfont: "Palatino Linotype"
+
