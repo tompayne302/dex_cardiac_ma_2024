@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tom Payne">
-<meta name="dcterms.date" content="2024-03-26">
+<meta name="dcterms.date" content="2024-04-10">
 
 <title>Dexmedetomidine Cardiac Meta-analysis - Dexmedetomidine in cardiac surgery meta-analysis</title>
 <style>
@@ -173,44 +173,45 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#probability-of-benefit-calculations" id="toc-probability-of-benefit-calculations" class="nav-link active" data-scroll-target="#probability-of-benefit-calculations"><span class="header-section-number">1</span> Probability of benefit calculations</a></li>
-  <li><a href="#sensitivity-using-other-priors" id="toc-sensitivity-using-other-priors" class="nav-link" data-scroll-target="#sensitivity-using-other-priors"><span class="header-section-number">2</span> Sensitivity using other priors</a></li>
-  <li><a href="#bayesian-re-analysis-of-decade" id="toc-bayesian-re-analysis-of-decade" class="nav-link" data-scroll-target="#bayesian-re-analysis-of-decade"><span class="header-section-number">3</span> Bayesian re-analysis of DECADE</a>
+  <li><a href="#overall-forest-plot" id="toc-overall-forest-plot" class="nav-link active" data-scroll-target="#overall-forest-plot"><span class="header-section-number">1</span> Overall forest plot</a></li>
+  <li><a href="#probability-of-benefit-calculations" id="toc-probability-of-benefit-calculations" class="nav-link" data-scroll-target="#probability-of-benefit-calculations"><span class="header-section-number">2</span> Probability of benefit calculations</a></li>
+  <li><a href="#sensitivity-using-other-priors" id="toc-sensitivity-using-other-priors" class="nav-link" data-scroll-target="#sensitivity-using-other-priors"><span class="header-section-number">3</span> Sensitivity using other priors</a></li>
+  <li><a href="#bayesian-re-analysis-of-decade" id="toc-bayesian-re-analysis-of-decade" class="nav-link" data-scroll-target="#bayesian-re-analysis-of-decade"><span class="header-section-number">4</span> Bayesian re-analysis of DECADE</a>
   <ul class="collapse">
-  <li><a href="#posterior-probabilities-with-different-priors" id="toc-posterior-probabilities-with-different-priors" class="nav-link" data-scroll-target="#posterior-probabilities-with-different-priors"><span class="header-section-number">3.1</span> Posterior probabilities with different priors</a></li>
-  <li><a href="#priors-explanations" id="toc-priors-explanations" class="nav-link" data-scroll-target="#priors-explanations"><span class="header-section-number">3.2</span> Priors explanations</a></li>
-  <li><a href="#arr-table" id="toc-arr-table" class="nav-link" data-scroll-target="#arr-table"><span class="header-section-number">3.3</span> ARR table</a></li>
-  <li><a href="#shrinkage-or-estimation-ecdfs" id="toc-shrinkage-or-estimation-ecdfs" class="nav-link" data-scroll-target="#shrinkage-or-estimation-ecdfs"><span class="header-section-number">3.4</span> Shrinkage OR estimation + ECDFs</a></li>
-  <li><a href="#average-treatment-effect-estimation" id="toc-average-treatment-effect-estimation" class="nav-link" data-scroll-target="#average-treatment-effect-estimation"><span class="header-section-number">3.5</span> Average treatment effect estimation</a>
+  <li><a href="#posterior-probabilities-with-different-priors" id="toc-posterior-probabilities-with-different-priors" class="nav-link" data-scroll-target="#posterior-probabilities-with-different-priors"><span class="header-section-number">4.1</span> Posterior probabilities with different priors</a></li>
+  <li><a href="#priors-explanations" id="toc-priors-explanations" class="nav-link" data-scroll-target="#priors-explanations"><span class="header-section-number">4.2</span> Priors explanations</a></li>
+  <li><a href="#arr-table" id="toc-arr-table" class="nav-link" data-scroll-target="#arr-table"><span class="header-section-number">4.3</span> ARR table</a></li>
+  <li><a href="#shrinkage-or-estimation-ecdfs" id="toc-shrinkage-or-estimation-ecdfs" class="nav-link" data-scroll-target="#shrinkage-or-estimation-ecdfs"><span class="header-section-number">4.4</span> Shrinkage OR estimation + ECDFs</a></li>
+  <li><a href="#average-treatment-effect-estimation" id="toc-average-treatment-effect-estimation" class="nav-link" data-scroll-target="#average-treatment-effect-estimation"><span class="header-section-number">4.5</span> Average treatment effect estimation</a>
   <ul class="collapse">
-  <li><a href="#ate-table" id="toc-ate-table" class="nav-link" data-scroll-target="#ate-table"><span class="header-section-number">3.5.1</span> ATE table</a></li>
+  <li><a href="#ate-table" id="toc-ate-table" class="nav-link" data-scroll-target="#ate-table"><span class="header-section-number">4.5.1</span> ATE table</a></li>
   </ul></li>
-  <li><a href="#combined-plot" id="toc-combined-plot" class="nav-link" data-scroll-target="#combined-plot"><span class="header-section-number">3.6</span> Combined plot</a></li>
+  <li><a href="#combined-plot" id="toc-combined-plot" class="nav-link" data-scroll-target="#combined-plot"><span class="header-section-number">4.6</span> Combined plot</a></li>
   </ul></li>
-  <li><a href="#metaregression" id="toc-metaregression" class="nav-link" data-scroll-target="#metaregression"><span class="header-section-number">4</span> Metaregression</a>
+  <li><a href="#metaregression" id="toc-metaregression" class="nav-link" data-scroll-target="#metaregression"><span class="header-section-number">5</span> Metaregression</a>
   <ul class="collapse">
-  <li><a href="#forest-plot-all-subgroups" id="toc-forest-plot-all-subgroups" class="nav-link" data-scroll-target="#forest-plot-all-subgroups"><span class="header-section-number">4.1</span> Forest plot all subgroups</a></li>
-  <li><a href="#explained-variability" id="toc-explained-variability" class="nav-link" data-scroll-target="#explained-variability"><span class="header-section-number">4.2</span> Explained variability</a></li>
-  <li><a href="#comparing-subgroups" id="toc-comparing-subgroups" class="nav-link" data-scroll-target="#comparing-subgroups"><span class="header-section-number">4.3</span> Comparing subgroups</a>
+  <li><a href="#forest-plot-all-subgroups" id="toc-forest-plot-all-subgroups" class="nav-link" data-scroll-target="#forest-plot-all-subgroups"><span class="header-section-number">5.1</span> Forest plot all subgroups</a></li>
+  <li><a href="#explained-variability" id="toc-explained-variability" class="nav-link" data-scroll-target="#explained-variability"><span class="header-section-number">5.2</span> Explained variability</a></li>
+  <li><a href="#comparing-subgroups" id="toc-comparing-subgroups" class="nav-link" data-scroll-target="#comparing-subgroups"><span class="header-section-number">5.3</span> Comparing subgroups</a>
   <ul class="collapse">
-  <li><a href="#figure" id="toc-figure" class="nav-link" data-scroll-target="#figure"><span class="header-section-number">4.3.1</span> Figure</a></li>
-  <li><a href="#tablulated" id="toc-tablulated" class="nav-link" data-scroll-target="#tablulated"><span class="header-section-number">4.3.2</span> Tablulated</a></li>
+  <li><a href="#figure" id="toc-figure" class="nav-link" data-scroll-target="#figure"><span class="header-section-number">5.3.1</span> Figure</a></li>
+  <li><a href="#tablulated" id="toc-tablulated" class="nav-link" data-scroll-target="#tablulated"><span class="header-section-number">5.3.2</span> Tablulated</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#secondary-outcomes" id="toc-secondary-outcomes" class="nav-link" data-scroll-target="#secondary-outcomes"><span class="header-section-number">5</span> Secondary outcomes</a>
+  <li><a href="#secondary-outcomes" id="toc-secondary-outcomes" class="nav-link" data-scroll-target="#secondary-outcomes"><span class="header-section-number">6</span> Secondary outcomes</a>
   <ul class="collapse">
-  <li><a href="#forest-plot" id="toc-forest-plot" class="nav-link" data-scroll-target="#forest-plot"><span class="header-section-number">5.1</span> Forest plot</a></li>
-  <li><a href="#probability-of-harm-calculations" id="toc-probability-of-harm-calculations" class="nav-link" data-scroll-target="#probability-of-harm-calculations"><span class="header-section-number">5.2</span> Probability of harm calculations</a></li>
+  <li><a href="#forest-plot" id="toc-forest-plot" class="nav-link" data-scroll-target="#forest-plot"><span class="header-section-number">6.1</span> Forest plot</a></li>
+  <li><a href="#probability-of-harm-calculations" id="toc-probability-of-harm-calculations" class="nav-link" data-scroll-target="#probability-of-harm-calculations"><span class="header-section-number">6.2</span> Probability of harm calculations</a></li>
   </ul></li>
-  <li><a href="#small-study-effects" id="toc-small-study-effects" class="nav-link" data-scroll-target="#small-study-effects"><span class="header-section-number">6</span> Small study effects</a>
+  <li><a href="#small-study-effects" id="toc-small-study-effects" class="nav-link" data-scroll-target="#small-study-effects"><span class="header-section-number">7</span> Small study effects</a>
   <ul class="collapse">
-  <li><a href="#bayesian-regression-test" id="toc-bayesian-regression-test" class="nav-link" data-scroll-target="#bayesian-regression-test"><span class="header-section-number">6.1</span> Bayesian regression test</a></li>
-  <li><a href="#all-studies-2" id="toc-all-studies-2" class="nav-link" data-scroll-target="#all-studies-2"><span class="header-section-number">6.2</span> All studies</a></li>
-  <li><a href="#bayesian-model-averaging" id="toc-bayesian-model-averaging" class="nav-link" data-scroll-target="#bayesian-model-averaging"><span class="header-section-number">6.3</span> Bayesian model averaging</a>
+  <li><a href="#bayesian-regression-test" id="toc-bayesian-regression-test" class="nav-link" data-scroll-target="#bayesian-regression-test"><span class="header-section-number">7.1</span> Bayesian regression test</a></li>
+  <li><a href="#all-studies-2" id="toc-all-studies-2" class="nav-link" data-scroll-target="#all-studies-2"><span class="header-section-number">7.2</span> All studies</a></li>
+  <li><a href="#bayesian-model-averaging" id="toc-bayesian-model-averaging" class="nav-link" data-scroll-target="#bayesian-model-averaging"><span class="header-section-number">7.3</span> Bayesian model averaging</a>
   <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">6.3.1</span> Summary</a></li>
-  <li><a href="#estimates" id="toc-estimates" class="nav-link" data-scroll-target="#estimates"><span class="header-section-number">6.3.2</span> Estimates</a></li>
-  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots"><span class="header-section-number">6.3.3</span> Plots</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">7.3.1</span> Summary</a></li>
+  <li><a href="#estimates" id="toc-estimates" class="nav-link" data-scroll-target="#estimates"><span class="header-section-number">7.3.2</span> Estimates</a></li>
+  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots"><span class="header-section-number">7.3.3</span> Plots</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -245,7 +246,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 26, 2024</p>
+      <p class="date">April 10, 2024</p>
     </div>
   </div>
   
@@ -257,7 +258,8 @@ window.Quarto = {
 </header>
 
 
-<pre><code>                                                                                                                                                                                                                                                                                       # Overall forest plot</code></pre>
+<section id="overall-forest-plot" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Overall forest plot</h1>
 <p>Below in <a href="#fig-forest-all-studies" class="quarto-xref">Figure&nbsp;3</a> and <a href="#fig-forest-low-rob" class="quarto-xref">Figure&nbsp;4</a> I show the forest plot of all studies, and excluding studies at high risk of bias, respectively.</p>
 <p>For meta-analysis, we will employ a Bayesian normal-normal hierarchical model (NNHM). It is a ‘normal-normal’ model because we assume on the first level that the within-study effects of each trial are normally distributed, and on the second level that the effects across different populations are normally distributed.</p>
 <p>Firstly - let’s discuss the within-study normality assumption. In the NNHM we assume that each study’s observed effect <span class="math inline">\(\hat{\theta}\)</span> is an estimate of the true effect in that trial population <span class="math inline">\({\theta}\)</span>, and the uncertainty in this estimate is modeled with a normal distribution with mean <span class="math inline">\({\theta}\)</span> and standard deviation <span class="math inline">\({\sigma}\)</span>:</p>
@@ -318,10 +320,10 @@ Figure&nbsp;2: Plot of the prior for heterogeneity parameter tau, with probabili
 <p>Firstly, the marginal effect size for Chitnis that we calculate is: OR = 0.43, 95%CI: 0.15 to 1.25. On the logOR scale, this is equivalent to logOR = -0.8341, SE: 0.5376802.</p>
 <p>As explained above, in a normal-normal hierarchical model model meta-analysis, we assume that each study’s true effect size follows a normal distribution with mean = calculated log odds ratio and SD = calculated standard error. So, we can draw random samples from this assumed distribution using the code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>effect_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="fl">0.8341</span>, <span class="fl">0.5376802</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(effect_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>effect_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="fl">0.8341</span>, <span class="fl">0.5376802</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(effect_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -1.135456658 -0.957861879  0.003986598 -0.796189034 -0.764584545
 [6]  0.088056485</code></pre>
@@ -330,39 +332,39 @@ Figure&nbsp;2: Plot of the prior for heterogeneity parameter tau, with probabili
 <p>But these estimates need to be modified due to possible bias arising from registration after enrollment beginning. A study by <a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-016-0639-x">Deschartres and colleagues</a> showed that there approximately a 19% greater effect size in studies that were unregistered or retrospectively registered (combined ROR = 0.81, 95% CI 0.65–1.02, based on 32 contributing meta-analyses).</p>
 <p>Based on this effect size and confidence interval, we can model the ‘inflation’ component as a normal distribution with mean 0.82 (corresponding to a 1 - 0.81 = 19% increase in effect) and standard deviation = 0.1:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>inflation_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.81</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>inflation_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.81</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can then multiply this bias adjustment by our assumed distribution of effect sizes from Chitnis, and take the mean and SD of the resulting distribution as the revised effect size and SE. We also need to add a for-loop because we’re on the logOR scale, with more negative values implying more benefit, so we need to be sure that ‘inflating’ the effect size means negative values are made less negative and positive values are made more positive. So, in cases where the value for inflation distribution is &lt;1 and the value for the effect size distribution is positive, then the reciprocal of ‘inflation’ should be used (e.g., 0.80 becomes 1.25). Similarly, if the value for inflation distribution is &gt;1 and the value for effect size distribution is positive, then the reciprocal of inflation should be used:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>inflation_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.81</span>, <span class="fl">0.1</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>effect_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="fl">0.8341</span>, <span class="fl">0.5376802</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> <span class="dv">1000</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each pair of values</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Conditionally modify inflation value</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (inflation_dist[i] <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (inflation_dist[i] <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> inflation_dist[i]</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform the multiplication</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    result[i] <span class="ot">&lt;-</span> inflation_adj <span class="sc">*</span> effect_dist[i]</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>inflation_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.81</span>, <span class="fl">0.1</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>effect_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="fl">0.8341</span>, <span class="fl">0.5376802</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> <span class="dv">1000</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each pair of values</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Conditionally modify inflation value</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (inflation_dist[i] <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (inflation_dist[i] <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> inflation_dist[i]</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform the multiplication</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    result[i] <span class="ot">&lt;-</span> inflation_adj <span class="sc">*</span> effect_dist[i]</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.6478209</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4599308</code></pre>
 </div>
@@ -370,33 +372,33 @@ Figure&nbsp;2: Plot of the prior for heterogeneity parameter tau, with probabili
 <p>And for Soh et al., the calculated OR is: OR = 0.26, 95%CI: 0.05 to 1.31. on the logOR scale, this is logOR = -1.347074, SE: 0.8266586.</p>
 <p>Applying the same procedure to Soh we get mean and SD:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>inflation_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.81</span>, <span class="fl">0.1</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>effect_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="fl">1.347074</span>, <span class="fl">0.8266586</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> <span class="dv">1000</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each pair of values</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Conditionally modify inflation value</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (inflation_dist[i] <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (inflation_dist[i] <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> inflation_dist[i]</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform the multiplication</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    result[i] <span class="ot">&lt;-</span> inflation_adj <span class="sc">*</span> effect_dist[i]</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>inflation_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.81</span>, <span class="fl">0.1</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>effect_dist <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="fl">1.347074</span>, <span class="fl">0.8266586</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="at">length =</span> <span class="dv">1000</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each pair of values</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Conditionally modify inflation value</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (inflation_dist[i] <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (inflation_dist[i] <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> effect_dist[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> inflation_dist[i]</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        inflation_adj <span class="ot">&lt;-</span> inflation_dist[i]</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform the multiplication</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    result[i] <span class="ot">&lt;-</span> inflation_adj <span class="sc">*</span> effect_dist[i]</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -1.049854</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7047859</code></pre>
 </div>
@@ -445,8 +447,9 @@ Figure&nbsp;4: Forest plot excluding studies at high risk of bias.
 </div>
 </div>
 </div>
-<section id="probability-of-benefit-calculations" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Probability of benefit calculations</h1>
+</section>
+<section id="probability-of-benefit-calculations" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Probability of benefit calculations</h1>
 <p>Now to calculate the probability of dexmedetomidine having certain effect sizes. In order to do this we need to transform the odds ratio into an interpretable effect size: the absolute risk reduction (ARR), or risk difference.</p>
 <p>To go from the OR ➜ ARR, you must first use the OR to calculate the risk in the treatment group (R<sub>t</sub>), as shown in <a href="#eq-1" class="quarto-xref">Equation&nbsp;1</a>.</p>
 <p><span id="eq-1"><span class="math display">\[
@@ -482,23 +485,23 @@ Table&nbsp;1: Probability of various ARRs, including all studies
 </figcaption>
 <div aria-describedby="tbl-benefit-probs-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="cegmmwmxht" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cegmmwmxht table {
+<div id="czxlnqlkjt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#czxlnqlkjt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cegmmwmxht thead, #cegmmwmxht tbody, #cegmmwmxht tfoot, #cegmmwmxht tr, #cegmmwmxht td, #cegmmwmxht th {
+#czxlnqlkjt thead, #czxlnqlkjt tbody, #czxlnqlkjt tfoot, #czxlnqlkjt tr, #czxlnqlkjt td, #czxlnqlkjt th {
   border-style: none;
 }
 
-#cegmmwmxht p {
+#czxlnqlkjt p {
   margin: 0;
   padding: 0;
 }
 
-#cegmmwmxht .gt_table {
+#czxlnqlkjt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -524,12 +527,12 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-left-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_caption {
+#czxlnqlkjt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cegmmwmxht .gt_title {
+#czxlnqlkjt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -541,7 +544,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-bottom-width: 0;
 }
 
-#cegmmwmxht .gt_subtitle {
+#czxlnqlkjt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -553,7 +556,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-top-width: 0;
 }
 
-#cegmmwmxht .gt_heading {
+#czxlnqlkjt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -565,13 +568,13 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-right-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_bottom_border {
+#czxlnqlkjt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_col_headings {
+#czxlnqlkjt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -586,7 +589,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-right-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_col_heading {
+#czxlnqlkjt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -606,7 +609,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   overflow-x: hidden;
 }
 
-#cegmmwmxht .gt_column_spanner_outer {
+#czxlnqlkjt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -618,15 +621,15 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   padding-right: 4px;
 }
 
-#cegmmwmxht .gt_column_spanner_outer:first-child {
+#czxlnqlkjt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cegmmwmxht .gt_column_spanner_outer:last-child {
+#czxlnqlkjt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cegmmwmxht .gt_column_spanner {
+#czxlnqlkjt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -638,11 +641,11 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   width: 100%;
 }
 
-#cegmmwmxht .gt_spanner_row {
+#czxlnqlkjt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cegmmwmxht .gt_group_heading {
+#czxlnqlkjt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -668,7 +671,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   text-align: left;
 }
 
-#cegmmwmxht .gt_empty_group_heading {
+#czxlnqlkjt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -683,15 +686,15 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   vertical-align: middle;
 }
 
-#cegmmwmxht .gt_from_md > :first-child {
+#czxlnqlkjt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cegmmwmxht .gt_from_md > :last-child {
+#czxlnqlkjt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cegmmwmxht .gt_row {
+#czxlnqlkjt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -710,7 +713,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   overflow-x: hidden;
 }
 
-#cegmmwmxht .gt_stub {
+#czxlnqlkjt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -723,7 +726,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   padding-right: 5px;
 }
 
-#cegmmwmxht .gt_stub_row_group {
+#czxlnqlkjt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -737,15 +740,15 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   vertical-align: top;
 }
 
-#cegmmwmxht .gt_row_group_first td {
+#czxlnqlkjt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cegmmwmxht .gt_row_group_first th {
+#czxlnqlkjt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cegmmwmxht .gt_summary_row {
+#czxlnqlkjt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -755,16 +758,16 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   padding-right: 5px;
 }
 
-#cegmmwmxht .gt_first_summary_row {
+#czxlnqlkjt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_first_summary_row.thick {
+#czxlnqlkjt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cegmmwmxht .gt_last_summary_row {
+#czxlnqlkjt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -774,7 +777,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-bottom-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_grand_summary_row {
+#czxlnqlkjt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -784,7 +787,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   padding-right: 5px;
 }
 
-#cegmmwmxht .gt_first_grand_summary_row {
+#czxlnqlkjt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -794,7 +797,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-top-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_last_grand_summary_row_top {
+#czxlnqlkjt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -804,11 +807,11 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-bottom-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_striped {
+#czxlnqlkjt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cegmmwmxht .gt_table_body {
+#czxlnqlkjt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -817,7 +820,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-bottom-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_footnotes {
+#czxlnqlkjt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -831,7 +834,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-right-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_footnote {
+#czxlnqlkjt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -840,7 +843,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   padding-right: 5px;
 }
 
-#cegmmwmxht .gt_sourcenotes {
+#czxlnqlkjt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -854,7 +857,7 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   border-right-color: #D3D3D3;
 }
 
-#cegmmwmxht .gt_sourcenote {
+#czxlnqlkjt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -862,63 +865,63 @@ Table&nbsp;1: Probability of various ARRs, including all studies
   padding-right: 5px;
 }
 
-#cegmmwmxht .gt_left {
+#czxlnqlkjt .gt_left {
   text-align: left;
 }
 
-#cegmmwmxht .gt_center {
+#czxlnqlkjt .gt_center {
   text-align: center;
 }
 
-#cegmmwmxht .gt_right {
+#czxlnqlkjt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cegmmwmxht .gt_font_normal {
+#czxlnqlkjt .gt_font_normal {
   font-weight: normal;
 }
 
-#cegmmwmxht .gt_font_bold {
+#czxlnqlkjt .gt_font_bold {
   font-weight: bold;
 }
 
-#cegmmwmxht .gt_font_italic {
+#czxlnqlkjt .gt_font_italic {
   font-style: italic;
 }
 
-#cegmmwmxht .gt_super {
+#czxlnqlkjt .gt_super {
   font-size: 65%;
 }
 
-#cegmmwmxht .gt_footnote_marks {
+#czxlnqlkjt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cegmmwmxht .gt_asterisk {
+#czxlnqlkjt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cegmmwmxht .gt_indent_1 {
+#czxlnqlkjt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cegmmwmxht .gt_indent_2 {
+#czxlnqlkjt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cegmmwmxht .gt_indent_3 {
+#czxlnqlkjt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cegmmwmxht .gt_indent_4 {
+#czxlnqlkjt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cegmmwmxht .gt_indent_5 {
+#czxlnqlkjt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -948,20 +951,20 @@ Table&nbsp;1: Probability of various ARRs, including all studies
 <tr class="even gt_row_group_first">
 <td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Intraoperative</td>
 <td class="gt_row gt_right" headers="Dose timing stub_1_2 Median control group rate (%)">16.0</td>
-<td class="gt_row gt_right" headers="Dose timing stub_1_2 Probability of any benefit (%)">72.9</td>
-<td class="gt_row gt_right" headers="Dose timing stub_1_2 Probability of ARR >MCID (2.3%)">51.2</td>
+<td class="gt_row gt_right" headers="Dose timing stub_1_2 Probability of any benefit (%)">71.2</td>
+<td class="gt_row gt_right" headers="Dose timing stub_1_2 Probability of ARR >MCID (2.3%)">49.6</td>
 </tr>
 <tr class="odd">
 <td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Intraoperative + postoperative</td>
 <td class="gt_row gt_right" headers="Dose timing stub_1_3 Median control group rate (%)">16.0</td>
-<td class="gt_row gt_right" headers="Dose timing stub_1_3 Probability of any benefit (%)">76.1</td>
-<td class="gt_row gt_right" headers="Dose timing stub_1_3 Probability of ARR >MCID (2.3%)">53.7</td>
+<td class="gt_row gt_right" headers="Dose timing stub_1_3 Probability of any benefit (%)">77.1</td>
+<td class="gt_row gt_right" headers="Dose timing stub_1_3 Probability of ARR >MCID (2.3%)">54.5</td>
 </tr>
 <tr class="even">
 <td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Postoperative</td>
 <td class="gt_row gt_right" headers="Dose timing stub_1_4 Median control group rate (%)">16.0</td>
-<td class="gt_row gt_right" headers="Dose timing stub_1_4 Probability of any benefit (%)">99.4</td>
-<td class="gt_row gt_right" headers="Dose timing stub_1_4 Probability of ARR >MCID (2.3%)">95.9</td>
+<td class="gt_row gt_right" headers="Dose timing stub_1_4 Probability of any benefit (%)">99.3</td>
+<td class="gt_row gt_right" headers="Dose timing stub_1_4 Probability of ARR >MCID (2.3%)">96.1</td>
 </tr>
 <tr class="odd gt_group_heading_row">
 <td colspan="4" id="Control agent" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Control agent</td>
@@ -969,20 +972,20 @@ Table&nbsp;1: Probability of various ARRs, including all studies
 <tr class="even gt_row_group_first">
 <td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Morphine</td>
 <td class="gt_row gt_right" headers="Control agent stub_1_5 Median control group rate (%)">16.0</td>
-<td class="gt_row gt_right" headers="Control agent stub_1_5 Probability of any benefit (%)">72.9</td>
-<td class="gt_row gt_right" headers="Control agent stub_1_5 Probability of ARR >MCID (2.3%)">51.2</td>
+<td class="gt_row gt_right" headers="Control agent stub_1_5 Probability of any benefit (%)">91.9</td>
+<td class="gt_row gt_right" headers="Control agent stub_1_5 Probability of ARR >MCID (2.3%)">80.8</td>
 </tr>
 <tr class="odd">
 <td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Normal saline</td>
 <td class="gt_row gt_right" headers="Control agent stub_1_6 Median control group rate (%)">16.0</td>
-<td class="gt_row gt_right" headers="Control agent stub_1_6 Probability of any benefit (%)">76.1</td>
-<td class="gt_row gt_right" headers="Control agent stub_1_6 Probability of ARR >MCID (2.3%)">53.7</td>
+<td class="gt_row gt_right" headers="Control agent stub_1_6 Probability of any benefit (%)">88.7</td>
+<td class="gt_row gt_right" headers="Control agent stub_1_6 Probability of ARR >MCID (2.3%)">57.4</td>
 </tr>
 <tr class="even">
 <td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Propofol</td>
 <td class="gt_row gt_right" headers="Control agent stub_1_7 Median control group rate (%)">16.0</td>
 <td class="gt_row gt_right" headers="Control agent stub_1_7 Probability of any benefit (%)">99.4</td>
-<td class="gt_row gt_right" headers="Control agent stub_1_7 Probability of ARR >MCID (2.3%)">95.9</td>
+<td class="gt_row gt_right" headers="Control agent stub_1_7 Probability of ARR >MCID (2.3%)">97.6</td>
 </tr>
 </tbody><tfoot class="gt_footnotes">
 <tr class="odd">
@@ -999,8 +1002,8 @@ Table&nbsp;1: Probability of various ARRs, including all studies
 </div>
 </div>
 </section>
-<section id="sensitivity-using-other-priors" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Sensitivity using other priors</h1>
+<section id="sensitivity-using-other-priors" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Sensitivity using other priors</h1>
 <p>Now to see if our results are sensitive to the choice of prior for 𝝁 and 𝛕.</p>
 <p><a href="#tbl-prior-sensitivity" class="quarto-xref">Table&nbsp;2</a> below shows the results using three different sets of priors. First is the informative prior, which is the prior we used for our primary analysis in <a href="#fig-forest-all-studies" class="quarto-xref">Figure&nbsp;3</a>:</p>
 <p><span class="math display">\[{\mu} ∽ Normal(0, 0.82)\]</span> <span class="math display">\[{\tau} ∽ HalfCauchy(0.5)\]</span></p>
@@ -1512,8 +1515,8 @@ Table&nbsp;2: Sensitivity analysis using weakly informative, vague, and Turner e
 </div>
 </div>
 </section>
-<section id="bayesian-re-analysis-of-decade" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Bayesian re-analysis of DECADE</h1>
+<section id="bayesian-re-analysis-of-decade" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Bayesian re-analysis of DECADE</h1>
 <p>Now to re-analyse the findings of the DECADE trial. Below is an overview of what we will do in this section:</p>
 <ol type="1">
 <li><p>Calculate priors and the minimum clinically important difference (MCID) for the DECADE trial. For priors, we will use reference and data-derived priors. Reference priors are based on possible attitudes towards this research question, and are guided by the MCID. The MCID is the minimum absolute log odds ratio above which we would consider an effect to be ‘meaningful.’ Data-derived priors are obtained from the meta-analysis excluding the DECADE trial.</p></li>
@@ -1554,17 +1557,17 @@ Note
 <p>First, the data-derived priors.</p>
 <p>Here, we run a Bayesian meta-analysis excluding the DECADE trial. We use a weakly informative prior for the mean effect, <span class="math inline">\({\mu}\)</span>, which is a normal distribution with mean 0 and standard deviation 0.82: <span class="math inline">\(Normal(0, 0.82)\)</span>. We also use a weakly informative prior for heterogeneity SD, <span class="math inline">\({\tau}\)</span>, which is a half-Cauchy distribution with a 0.5 scale parameter: <span class="math inline">\(HalfCauchy(0.5)\)</span>. These are the exact same priors we used for the primary analysis in <a href="#fig-forest-all-studies" class="quarto-xref">Figure&nbsp;3</a>.</p>
 <p>The code below is for the meta-analysis. It’s the same code that is used for all the other meta-analytic models in this document. <code>IVdat_del</code> is an <code>escalc()</code> object with effect sizes and variances for studies in the meta-analysis, excluding the DECADE trial.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>priors_meta_analysis <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>,<span class="fl">0.82</span>), <span class="at">class =</span> b, <span class="at">coef =</span> <span class="st">"Intercept"</span>) <span class="sc">+</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                        brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">cauchy</span>(<span class="dv">0</span>,<span class="fl">0.5</span>), <span class="at">class =</span> sd)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>meta_analysis_brm <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">brm</span>(yi <span class="sc">|</span> <span class="fu">se</span>(sei) <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Intercept <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> author1),</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> IVdat_del,</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">prior =</span> priors_meta_analysis,</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">iter =</span> <span class="dv">4000</span>,</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">backend =</span> <span class="st">"cmdstanr"</span>, </span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">chains =</span> <span class="dv">4</span>,</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>priors_meta_analysis <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>,<span class="fl">0.82</span>), <span class="at">class =</span> b, <span class="at">coef =</span> <span class="st">"Intercept"</span>) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                        brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">cauchy</span>(<span class="dv">0</span>,<span class="fl">0.5</span>), <span class="at">class =</span> sd)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>meta_analysis_brm <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">brm</span>(yi <span class="sc">|</span> <span class="fu">se</span>(sei) <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Intercept <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> author1),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> IVdat_del,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">prior =</span> priors_meta_analysis,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">iter =</span> <span class="dv">4000</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">backend =</span> <span class="st">"cmdstanr"</span>, </span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">chains =</span> <span class="dv">4</span>,</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>As discussed above, the normal-normal hierarchical model for meta-analysis (which we are using here) assumes that each individual study’s effects are normally distributed (the first ‘normal’), but also that the overall effects across different populations follows a normal distribution with mean <span class="math inline">\({\mu}\)</span> and standard deviation <span class="math inline">\({\tau}\)</span> (the second ‘normal’). This has the notation: <span class="math inline">\(N({\mu}, {\tau}^2)\)</span>. This is why <span class="math inline">\({\tau}\)</span> is a measure of heterogeneity; it quantifies variability in effects across patient populations.</p>
 <p>Now, what we have done below is make the prior for the <code>treatment</code> coefficient in logistic regression for the DECADE trial a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\tau\)</span> (both obtained from the meta-analysis (MA)):</p>
 <p><span class="math display">\[
@@ -1572,18 +1575,18 @@ Note
 \]</span></p>
 <p>We set the Intercept prior (the odds of delirium when all predictor variables are held at their reference value) to <span class="math inline">\(N(0, 1)\)</span>.</p>
 <p>So the logistic regression model for DECADE’s results that I call in <code>brms</code> is as follows:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>priors_regression <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(𝛍,𝛕), <span class="at">coef =</span> <span class="st">"groupdexmedetomidine"</span>) <span class="sc">+</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                     brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">class =</span> b)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>logstic_regression.brm <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">brm</span>(delirium <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Intercept <span class="sc">+</span> group,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> df,</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">family =</span> <span class="fu">bernoulli</span>(<span class="at">link =</span> <span class="st">"logit"</span>),</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">prior =</span> priors_regression,</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">iter =</span> <span class="dv">4000</span>,</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">backend =</span> <span class="st">"cmdstanr"</span>, </span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">chains =</span> <span class="dv">4</span>,</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>priors_regression <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(𝛍,𝛕), <span class="at">coef =</span> <span class="st">"groupdexmedetomidine"</span>) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                     brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">class =</span> b)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>logstic_regression.brm <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">brm</span>(delirium <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Intercept <span class="sc">+</span> group,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> df,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">family =</span> <span class="fu">bernoulli</span>(<span class="at">link =</span> <span class="st">"logit"</span>),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">prior =</span> priors_regression,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">iter =</span> <span class="dv">4000</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">backend =</span> <span class="st">"cmdstanr"</span>, </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">chains =</span> <span class="dv">4</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We also want to present analyses re-weighting the effect of the meta-analysis prior. This is done to account for perceived issues with the meta-analysis - such as publication bias (which we have assessed to be very significant), and the inclusion of low-quality studies. To do this, we present a publication-bias adjusted prior, and a prior including only low risk of bias studies.</p>
 <p>Now for the ‘reference’ priors.</p>
 <p>Reference priors are meant to reflect various prior attitudes towards the research question: from very sceptical to very optimistic. References priors are informed by a consideration of the minimal clinically important difference (MCID). I am going to use the MCID in two ways, which we describe in detail below:</p>
@@ -1685,8 +1688,8 @@ R_t = \frac{R_c × OR}{R_c × (OR - 1) + 1}
 <li>Neutral: <span class="math inline">\(Normal(0, 0.355)\)</span>. 95% of the probability density lies between an odds ratio of 0.5 to 2.0. This is a reasonable prior to reflect the attitude of someone who thinks dexmedetomidine is equally likely to have a beneficial or harmful effect, and smaller effects are more likely than bigger ones.</li>
 <li>Optimistic: <span class="math inline">\(Normal(-0.27, 0.206)\)</span>. Equivalent to an RCT enrolling 1000 people and showing a 24% reduction in the odds of delirium (<span class="math inline">\(MCID × 1.5\)</span>) with dexmedetomidine.</li>
 </ul>
-<section id="posterior-probabilities-with-different-priors" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="posterior-probabilities-with-different-priors"><span class="header-section-number">3.1</span> Posterior probabilities with different priors</h2>
+<section id="posterior-probabilities-with-different-priors" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="posterior-probabilities-with-different-priors"><span class="header-section-number">4.1</span> Posterior probabilities with different priors</h2>
 <p><a href="#fig-priors-plots-all" class="quarto-xref">Figure&nbsp;5</a> shows the distributions of the priors. The top two panels show the distribution of the (A) reference priors, and (B) meta-analysis priors. The bottom forest plot shows the posterior distribution of DECADE’s results for each prior. The grey region denotes the ROPE. The purple lines show the DECADE’s findings when analysed alone. The grey lines represent the prior. Regions of the posterior that suggest benefit (OR &lt; 1) are shaded in blue and those that suggest harm (OR &gt; 1) are shaded in red. The probabilities of any harm or benefit, and the harm or benefit exceeding the MCID, are shown for each prior.</p>
 <div class="cell" data-errors="false">
 <div class="cell-output-display">
@@ -1703,8 +1706,8 @@ Figure&nbsp;5: Plots of the distributions of the reference and meta-analysis pri
 </div>
 </div>
 </section>
-<section id="priors-explanations" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="priors-explanations"><span class="header-section-number">3.2</span> Priors explanations</h2>
+<section id="priors-explanations" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="priors-explanations"><span class="header-section-number">4.2</span> Priors explanations</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div id="zgdldtwajc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -2205,8 +2208,8 @@ Figure&nbsp;5: Plots of the distributions of the reference and meta-analysis pri
 </div>
 </div>
 </section>
-<section id="arr-table" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="arr-table"><span class="header-section-number">3.3</span> ARR table</h2>
+<section id="arr-table" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="arr-table"><span class="header-section-number">4.3</span> ARR table</h2>
 <p>Below we provide direct probability statements for the DECADE trial’s results given each priors we specified above.</p>
 <p>We have chosen to present the risk of any harm or benefit, and the harm exceeding the MCID for benefit and harm (calculated by conversion of a logOR of +/-0.18 using the median control group rate of delirium in the DECADE trial).</p>
 <p>All ARRs in <a href="#tbl-arr" class="quarto-xref">Table&nbsp;3</a> below use <code>avg_comparisons()</code> function from the <code>marginaleffects</code> package to obtain risk differences as the measure of effect. It does this via g-computation.</p>
@@ -2738,8 +2741,8 @@ Table&nbsp;3: Explanations for priors for DECADE and the corresponding probabili
 </div>
 </div>
 </section>
-<section id="shrinkage-or-estimation-ecdfs" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="shrinkage-or-estimation-ecdfs"><span class="header-section-number">3.4</span> Shrinkage OR estimation + ECDFs</h2>
+<section id="shrinkage-or-estimation-ecdfs" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="shrinkage-or-estimation-ecdfs"><span class="header-section-number">4.4</span> Shrinkage OR estimation + ECDFs</h2>
 <p>Now let’s zoom on the relative distributions of the mean effect when we include and exclude the DECADE trial from the meta-analysis. For this we will use empirical cumulative distribution function (ECDF) plots.</p>
 <p>I consider four density functions: meta-analysis including DECADE, meta-analysis excluding DECADE, DECADE alone, and the DECADE shrinkage estimate from the meta-analysis.</p>
 <p>The x-axis is common to the upper and lower graphs so one is able to read off the probability of any odds ratio for any of the four curves. <a href="#fig-ecdfs" class="quarto-xref">Figure&nbsp;6</a> shows the results. The grey region denotes the ROPE (<span class="math inline">\(log(OR) = ± 0.18\)</span>).</p>
@@ -2781,8 +2784,8 @@ Figure&nbsp;7: Empirical cumulative distribution function (ECDF) plots including
 </div>
 </div>
 </section>
-<section id="average-treatment-effect-estimation" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="average-treatment-effect-estimation"><span class="header-section-number">3.5</span> Average treatment effect estimation</h2>
+<section id="average-treatment-effect-estimation" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="average-treatment-effect-estimation"><span class="header-section-number">4.5</span> Average treatment effect estimation</h2>
 <p>To this point, we have been using odds ratios (from logistic regression) in various fancy ways to generate other helpful statistics (probabilities of harm, benefit, etc.).</p>
 <p>But odds ratios are not infallible. Firstly, there is the issue of noncollapsibility.</p>
 <p>As <a href="https://www.jclinepi.com/article/S0895-4356(21)00182-7/fulltext">Sander Greenland explains</a>:</p>
@@ -2792,8 +2795,8 @@ Figure&nbsp;7: Empirical cumulative distribution function (ECDF) plots including
 <p>Blogs by <a href="https://cameronpatrick.com/post/2023/07/logit-rd-rr/#fnref6">Cameron Patrick</a> and <a href="https://solomonkurz.netlify.app/blog/2023-04-24-causal-inference-with-logistic-regression/#fnref:9">Solomun Kurz</a> provide excellent overviews of non-collapsiblity and obtaining non-odds ratio estimates from logistic regression. See also <a href="https://www.fharrell.com/post/marg/">Frank Harrell’s comments</a> for a great example of non-collapsbility.</p>
 <p>For our purposes, the noncollapsbility of ORs means that our <em>marginal OR from DECADE is not a weighted average of possible hidden subpopulations.</em> Another effect of non-collapsiblity is that the <em>effect estimate will change when adjusting for a variable that is not a confounder</em>, while it does not change for collapsible measures (e.g., relative risk).</p>
 <p>Another issue is that odds ratios are not a true measure of the ‘average treatment effect (ATE)’. Some have also referred to the ATE as the “difference in probabilities”, “discrete differences,” or “discrete change.” The ATE is a population-level summary of the effect of an intervention. A true measure of the ATE is, for example, the risk difference.</p>
-<section id="ate-table" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="ate-table"><span class="header-section-number">3.5.1</span> ATE table</h3>
+<section id="ate-table" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="ate-table"><span class="header-section-number">4.5.1</span> ATE table</h3>
 <p>So, let’s get into estimating the ATE, in the form of the risk differences obtained from an ANOVA-type logistic regression model. For this we will use the <code>avg_comparisons()</code> function in the <code>marginaleffects</code> package, which calculates estimates from brms (and frequentist) models.</p>
 <div class="cell">
 <div id="tbl-ate" class="cell quarto-float anchored">
@@ -3305,8 +3308,8 @@ Table&nbsp;4: Average treatment effect of dexmedetomidine in the DECADE trial
 </div>
 </section>
 </section>
-<section id="combined-plot" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="combined-plot"><span class="header-section-number">3.6</span> Combined plot</h2>
+<section id="combined-plot" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="combined-plot"><span class="header-section-number">4.6</span> Combined plot</h2>
 <div class="cell" data-errors="false">
 <div class="cell-output-display">
 <div>
@@ -3318,27 +3321,27 @@ Table&nbsp;4: Average treatment effect of dexmedetomidine in the DECADE trial
 </div>
 </section>
 </section>
-<section id="metaregression" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Metaregression</h1>
+<section id="metaregression" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Metaregression</h1>
 <p>Now let’s consider how the effect of dexmedetomidine may across populations vary due to various factors. This is called metaregression, which is just the meta-analysis equivalent of multivariable linear regression. By glancing at it, it just looks like subgroup analysis, which is correct. <em>Subgroup analysis is just a form of metaregression with a categorical moderator.</em></p>
 <p>Below I’ve used similar priors as I used for our primary analysis. Although, here we are interested in the <code>moderator</code> coefficient, rather than the intercept coefficient. So my prior for the coefficient of interest is <span class="math inline">\(N(0, 0.82)\)</span> while for the intercept coefficient it is <span class="math inline">\(N(0, 1)\)</span>. Given it’s the treatment coefficient we’re interested in, we’re using the <span class="math inline">\(Normal(0,0.82)\)</span> prior for the same reason as described above for the primary analysis. I also retain the same <span class="math inline">\({\tau}\)</span> priors as in our primary analysis: <span class="math inline">\(Cauchy(0, 0.5)\)</span>. In summary, our priors are:</p>
 <p><span class="math display">\[Intercept \sim Normal(0, 1)\]</span> <span class="math display">\[\tau \sim HalfCauchy(0.5)\]</span> <span class="math display">\[\beta_\text{treatment} \sim Normal(0, 0.82)\]</span></p>
 <p>And the code for priors using <code>brms</code> is:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>priors_metareg <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b, <span class="at">coef =</span> <span class="st">"Intercept"</span>) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                  brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">cauchy</span>(<span class="dv">0</span>,<span class="fl">0.5</span>), <span class="at">class =</span> sd) <span class="sc">+</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                  brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>,<span class="fl">0.82</span>), <span class="at">class =</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>priors_metareg <span class="ot">&lt;-</span> brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b, <span class="at">coef =</span> <span class="st">"Intercept"</span>) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                  brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">cauchy</span>(<span class="dv">0</span>,<span class="fl">0.5</span>), <span class="at">class =</span> sd) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                  brms<span class="sc">::</span><span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>,<span class="fl">0.82</span>), <span class="at">class =</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The results in the following code for the model (where ‘covariate’ is the moderator variable):</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>m.brm_covariate <span class="ot">&lt;-</span> <span class="fu">brm</span>(yi <span class="sc">|</span> <span class="fu">se</span>(sei) <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Intercept <span class="sc">+</span> covariate <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> author1),</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">data =</span> IVdat_del, </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">prior =</span> priors_metareg,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">iter =</span> <span class="dv">4000</span>,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">backend =</span> <span class="st">"cmdstanr"</span>, </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">chains =</span> <span class="dv">4</span>,</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">seed =</span> <span class="dv">123</span>)<span class="er">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>m.brm_covariate <span class="ot">&lt;-</span> <span class="fu">brm</span>(yi <span class="sc">|</span> <span class="fu">se</span>(sei) <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Intercept <span class="sc">+</span> covariate <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> author1),</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                       <span class="at">data =</span> IVdat_del, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">prior =</span> priors_metareg,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">iter =</span> <span class="dv">4000</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">backend =</span> <span class="st">"cmdstanr"</span>, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">chains =</span> <span class="dv">4</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">seed =</span> <span class="dv">123</span>)<span class="er">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In the plot below <a href="#fig-metareg-brms" class="quarto-xref">Figure&nbsp;8</a>, the blue curve is the posterior distribution of the regression coefficient draws for each outcome. The orange line is the prediction interval.</p>
-<section id="forest-plot-all-subgroups" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="forest-plot-all-subgroups"><span class="header-section-number">4.1</span> Forest plot all subgroups</h2>
+<section id="forest-plot-all-subgroups" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="forest-plot-all-subgroups"><span class="header-section-number">5.1</span> Forest plot all subgroups</h2>
 <div class="cell" data-fig.wdith="13">
 <div class="cell-output-display">
 <div id="fig-metareg-brms" class="quarto-figure quarto-figure-center quarto-float anchored" width="90%">
@@ -3354,8 +3357,8 @@ Figure&nbsp;8: Metaregression plots.
 </div>
 </div>
 </section>
-<section id="explained-variability" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="explained-variability"><span class="header-section-number">4.2</span> Explained variability</h2>
+<section id="explained-variability" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="explained-variability"><span class="header-section-number">5.2</span> Explained variability</h2>
 <p>Now to look at how much heterogeneity our moderators actually explain. A great overview is provided by <a href="https://stat.ethz.ch/pipermail/r-sig-meta-analysis/2019-April/001499.html">Wolfgang Vietchbauer</a>.</p>
 <p>Basically, we can compare the values for <span class="math inline">\(\tau^2\)</span> in the adjusted and unadjusted model.</p>
 <p>To calculate the proportion of explained variability (pseudo<span class="math inline">\(R^2\)</span>), we can use the formula:</p>
@@ -3846,12 +3849,12 @@ Table&nbsp;5: Proportion of explain variation by the metaregressors.
 </div>
 </div>
 </section>
-<section id="comparing-subgroups" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="comparing-subgroups"><span class="header-section-number">4.3</span> Comparing subgroups</h2>
+<section id="comparing-subgroups" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="comparing-subgroups"><span class="header-section-number">5.3</span> Comparing subgroups</h2>
 <p>The idea for this analysis was obtained <a href="https://discourse.mc-stan.org/t/testing-moderator-comparisons-in-bayesian-meta-analysis/22355">here</a>.</p>
 <p>We will conduct hypothesis tests to compare the levels of the factor in the multilevel model.</p>
-<section id="figure" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="figure"><span class="header-section-number">4.3.1</span> Figure</h3>
+<section id="figure" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="figure"><span class="header-section-number">5.3.1</span> Figure</h3>
 <p>Let’s start by plotting the posterior distributions for each of the variables’ levels.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -3868,8 +3871,8 @@ Figure&nbsp;9: Comparison of effect with different dose timing.
 </div>
 </div>
 </section>
-<section id="tablulated" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="tablulated"><span class="header-section-number">4.3.2</span> Tablulated</h3>
+<section id="tablulated" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="tablulated"><span class="header-section-number">5.3.2</span> Tablulated</h3>
 <p>Now let’s use the brms function <code>brms::hypothesis()</code> to compare levels of the variables.</p>
 <p>The includes the (one-sided hypothesis test) evidence ratio, which is described by Paul Buerkner as:</p>
 <blockquote class="blockquote">
@@ -4429,13 +4432,13 @@ Table&nbsp;6: Comparison of effect with different dose timing.
 </section>
 </section>
 </section>
-<section id="secondary-outcomes" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Secondary outcomes</h1>
+<section id="secondary-outcomes" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Secondary outcomes</h1>
 <p>Now for the secondary outcomes. For these we used the same priors as in our primary analysis for binary outcomes.</p>
 <p>For the continuous secondary outcomes, slightly different priors were required. Our NNHM remains the same, but now we need to specify a meaningful prior for a mean difference rather than an odds ratio. We have chosen a normal prior with mean 0 and standard deviation 1. That is, 95% of the density is around -2 to 2. This again is a weakly informative prior - we expect that dexmedetomidine may affect outcomes such as length of hospital stay, but it is unlikely that the magnitude of effect is greater than a 2 day difference. We will use the same prior for the coefficient <span class="math inline">\(\beta\)</span> in metaregression of continuous secondary outcomes. We will use the same priors for <span class="math inline">\(\tau\)</span>. So, for our continuous secondary outcomes, the formulas for our NNHM are:</p>
 <p><span class="math display">\[\hat{\theta} \sim Normal(\theta, \sigma^2)\]</span> <span class="math display">\[\theta \sim Normal(\mu, \tau^2)\]</span> <span class="math display">\[\mu \sim Normal(0,1)\]</span> <span class="math display">\[\tau \sim HalfCauchy(0.5)\]</span> <span class="math display">\[\beta \sim Normal(0,1)\]</span></p>
-<section id="forest-plot" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="forest-plot"><span class="header-section-number">5.1</span> Forest plot</h2>
+<section id="forest-plot" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="forest-plot"><span class="header-section-number">6.1</span> Forest plot</h2>
 <p>For the ‘Mean (SD)’ columns for the continuous outcomes, we used the unweighted grand mean (means of all the studys’ means and SDs). As such, these numbers as essentially arbitrary (because means from tiny studies are weighted equally to means from massive studies). We just present these numbers to give the reader an idea of the sorts of values that were observed in the included studies.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -4452,8 +4455,8 @@ Figure&nbsp;10: Forest plot of the secondary outcomes.
 </div>
 </div>
 </section>
-<section id="probability-of-harm-calculations" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="probability-of-harm-calculations"><span class="header-section-number">5.2</span> Probability of harm calculations</h2>
+<section id="probability-of-harm-calculations" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="probability-of-harm-calculations"><span class="header-section-number">6.2</span> Probability of harm calculations</h2>
 <p>Let’s also look at the probability of dexmedetomidine causing various levels of harm, in the form of bradycardia and hypotension. This is equal and opposite to <a href="#tbl-benefit-probs-all" class="quarto-xref">Table&nbsp;1</a>. <a href="#tbl-harm-probs-secondary" class="quarto-xref">Table&nbsp;7</a> below shows the relevant figures.</p>
 <div class="cell" data-errors="false">
 <div id="tbl-harm-probs-secondary" class="cell quarto-float anchored" data-errors="false">
@@ -4943,11 +4946,11 @@ Table&nbsp;7: Probability of harm of dexmedetomidine in causing bradycardia and 
 </div>
 </section>
 </section>
-<section id="small-study-effects" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Small study effects</h1>
+<section id="small-study-effects" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Small study effects</h1>
 <p>We will use two Bayesian methods of sample study effects assessment: Bayesian regression testing and Bayesian model averaging.</p>
-<section id="bayesian-regression-test" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="bayesian-regression-test"><span class="header-section-number">6.1</span> Bayesian regression test</h2>
+<section id="bayesian-regression-test" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="bayesian-regression-test"><span class="header-section-number">7.1</span> Bayesian regression test</h2>
 <p>Arguably the most popular method of sample study effect assessment is through analysis of funnel plot asymmetry, in the form of Egger’s regression test (and variants therein). This test involves regressing the effect sizes of studies according to their precision; slopes that are significantly different from 0 suggest sample sample effects. This can also be applied in a Bayesian framework, and was described recently by <a href="https://pubmed.ncbi.nlm.nih.gov/32424987/">Shi et al.</a> The interpretation regarding the slope is similar to the frequentist Egger’s test. Shi et al.&nbsp;use the latent “true” SEs in the Egger-type regression under the Bayesian framework.</p>
 <p>Like many sample bias tests, <strong>this actually assesses funnel plot asymmetry (of which publication bias is only 1 cause).</strong></p>
 <p>For a list of alternative causes of funnel plot asymmetry, see <a href="https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/pub-bias.html">Harrer et al.</a></p>
@@ -4961,8 +4964,8 @@ Table&nbsp;7: Probability of harm of dexmedetomidine in causing bradycardia and 
 <p>There are various options for inputs. We will use multiplicative heterogeneity rather than additive heterogeneity. We will use a half-normal prior with 0.5 scale parameter (Cauchy distributions are not available but the difference is likely trivial). The default vague priors for the regression intercept and slope are used: <span class="math inline">\(N(0, 10^4)\)</span>, as this is the approach use for the model’s validation in <a href="https://pubmed.ncbi.nlm.nih.gov/32424987/">Shi et al.</a></p>
 <p>As you can see in <a href="#tbl-bayesian-regression" class="quarto-xref">Table&nbsp;8</a>, the 95%CrI for the slope excludes 0, whether looking at all studies or excluding studies at high risk of bias. This suggests the presence of publication bias.</p>
 </section>
-<section id="all-studies-2" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="all-studies-2"><span class="header-section-number">6.2</span> All studies</h2>
+<section id="all-studies-2" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="all-studies-2"><span class="header-section-number">7.2</span> All studies</h2>
 <div class="cell" data-errors="false">
 <div class="cell-output cell-output-stdout">
 <pre><code>Compiling model graph
@@ -5466,8 +5469,8 @@ Table&nbsp;8: Bayesian regression testing to assess for small study effects.
 </div>
 </div>
 </section>
-<section id="bayesian-model-averaging" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="bayesian-model-averaging"><span class="header-section-number">6.3</span> Bayesian model averaging</h2>
+<section id="bayesian-model-averaging" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="bayesian-model-averaging"><span class="header-section-number">7.3</span> Bayesian model averaging</h2>
 <p>Bayesian model averaging is well described by <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jrsm.1594">Bartos et al.</a>:</p>
 <blockquote class="blockquote">
 <p>“In practice, researchers seldom have knowledge about the data-generating process nor do they have sufficient information to choose with confidence among the wide variety of proposed methods that aim to adjust for publication bias. Furthermore, this wide range of proposed methods often leads to contradictory conclusions. The combination of uncertainty about the data-generating process and the presence of conflicting conclusions can create a”breeding ground” for confirmation bias: researchers may unintentionally select those methods that support the desired outcome. This freedom to choose can greatly inflate the rate of false positives, which can be a serious problem for conventional meta-analysis methods.”</p>
@@ -5480,8 +5483,8 @@ BF_{10} = \frac{p(data | H_1)}{p(data | H_0)}
 <p>The benefit provided by the model averaging approach is that we are provided with an inclusion Bayes factor for publication bias. A high inclusion BF for publication bias would suggest that models accounting for publication bias are more consistent with the observed data. We are also provided with an estimate that accounts for publication bias.</p>
 <p>Publication bias models include selection models and PET-PEESE models as methods of publication bias assessment. The publication bias adjustment prior is described in <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jrsm.1594">Bartoš (2021).</a></p>
 <p><a href="#tbl-robma" class="quarto-xref">Table&nbsp;9</a> shows the results.</p>
-<section id="summary" class="level3" data-number="6.3.1">
-<h3 data-number="6.3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.3.1</span> Summary</h3>
+<section id="summary" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.3.1</span> Summary</h3>
 <div class="cell">
 <div id="tbl-robma" class="cell quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -6000,8 +6003,8 @@ Table&nbsp;9: Results of the model-averaging approach to meta-analysis, with res
 </div>
 </div>
 </section>
-<section id="estimates" class="level3" data-number="6.3.2">
-<h3 data-number="6.3.2" class="anchored" data-anchor-id="estimates"><span class="header-section-number">6.3.2</span> Estimates</h3>
+<section id="estimates" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="estimates"><span class="header-section-number">7.3.2</span> Estimates</h3>
 <p>Below we present the model-averaged estimates from the robust Bayesian meta-analysis. We present model-averaged estimates (averaged across models assuming the null is true, and models assuming the alternative hypothesis is true) as well as conditional estimates (averaged over only models that assume the alternative hypothesis is true).</p>
 <div id="tbl-robma_estimates" class="cell anchored">
 <div class="cell-output-display">
@@ -6506,8 +6509,8 @@ Table&nbsp;9: Results of the model-averaging approach to meta-analysis, with res
 </div>
 </div>
 </section>
-<section id="plots" class="level3" data-number="6.3.3">
-<h3 data-number="6.3.3" class="anchored" data-anchor-id="plots"><span class="header-section-number">6.3.3</span> Plots</h3>
+<section id="plots" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="plots"><span class="header-section-number">7.3.3</span> Plots</h3>
 <p>Now let’s plot the posterior distributions for the mean effect to visualise the effect of publication bias. In <a href="#fig-robma-plots" class="quarto-xref">Figure&nbsp;11</a> below, (A) shows the distribution of the model-averaged estimate with models including publication bias, and (B) is the average distribution of models that do not include publication bias.</p>
 <p>Our model-averaged estimates in these plots use models that assume the absence of an effect (other options includes models that assume the presence of an effect).</p>
 <p>The arrows demonstrate the probability of a spike at <span class="math inline">\(log(OR) = 0\)</span> (no effect).</p>
