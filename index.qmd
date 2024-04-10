@@ -403,7 +403,8 @@ forest_theme <- theme(axis.text.y = element_blank(),
                                         size = 12))
 
 ```
-                                                                                                                                                                                                                                                                                           # Overall forest plot
+
+# Overall forest plot
 
 Below in @fig-forest-all-studies and @fig-forest-low-rob I show the forest plot of all studies, and excluding studies at high risk of bias, respectively.
 
@@ -1449,9 +1450,9 @@ prob_tbl1 <- as.data.frame(rbind("Overall" = c("Overall", "Overall", Rc_overall,
      "Intraoperative" = c("Intraoperative", "Dose timing", Rc_overall, probs_intraop),
      "Intraoperative + postoperative" = c("Intraoperative + postoperative", "Dose timing", Rc_overall, probs_intraop_postop),
      "Postoperative" = c("Postoperative", "Dose timing", Rc_overall, probs_postop),
-     "Morphine" = c("Morphine", "Control agent", Rc_overall, probs_intraop),
-     "Normal saline" = c("Normal saline", "Control agent", Rc_overall, probs_intraop_postop),
-     "Propofol" = c("Propofol", "Control agent", Rc_overall, probs_postop))) %>%
+     "Morphine" = c("Morphine", "Control agent", Rc_overall, probs_morphine),
+     "Normal saline" = c("Normal saline", "Control agent", Rc_overall, probs_saline),
+     "Propofol" = c("Propofol", "Control agent", Rc_overall, probs_propofol))) %>%
   mutate_at(vars(3:5), as.numeric) %>%
   rename(`Subgroup` = V1,
          `group` = V2,
@@ -3279,7 +3280,7 @@ pred_morphine_df <- brms::posterior_predict(object = m.brm_control_agent,
 pred_morphine_summ <- pred_morphine_df |> 
              data.frame() |>
              ggdist::median_hdi() |>
-            rename(coeff = 1)
+             rename(coeff = 1)
 
 nd_propofol = data.frame(author1 = "new", control_agent_clean = "Propofol", sei = 0)
   
@@ -3319,14 +3320,14 @@ pred_df_control_agent <- pred_df_control_agent[c(7, 1:3)] %>%
 forest.data.summary_control_agent_comb <- left_join(forest.data.summary_control_agent, pred_df_control_agent, by = "author1") %>%
   mutate(author1 = as.factor(author1),
          dex_del_rate_frac = c(sum_dex_or_control_ratio("control_agent_clean", "Morphine", "dex"), 
-                               sum_dex_or_control_ratio("control_agent_clean", "Propofol", "dex"),
-                               sum_dex_or_control_ratio("control_agent_clean", "Normal saline", "dex")),
+                               sum_dex_or_control_ratio("control_agent_clean", "Normal saline", "dex"),
+                               sum_dex_or_control_ratio("control_agent_clean", "Propofol", "dex")),
          control_del_rate_frac = c(sum_dex_or_control_ratio("control_agent_clean", "Morphine", "control"),
-                               sum_dex_or_control_ratio("control_agent_clean", "Propofol", "control"),
-                               sum_dex_or_control_ratio("control_agent_clean", "Normal saline", "control")),
+                               sum_dex_or_control_ratio("control_agent_clean", "Normal saline", "control"),
+                               sum_dex_or_control_ratio("control_agent_clean", "Propofol", "control")),
          study_number = as.character(c(count_na("control_agent_clean", "Morphine"), 
-                                       count_na("control_agent_clean", "Propofol"),
-                                       count_na("control_agent_clean", "Normal saline"))),
+                                       count_na("control_agent_clean", "Normal saline"),
+                                       count_na("control_agent_clean", "Propofol"))),
          unweighted_effect = paste0(sprintf('%.2f', exp(coeff)), 
                   ' [', sprintf('%.2f', exp(.lower)),
                   ', ', sprintf('%.2f', exp(.upper)), ']'),
